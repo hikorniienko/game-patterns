@@ -4,8 +4,8 @@
     "version": "0.0.0",
     "type": "commonjs",
     "scripts": {
-        "dev": "webpack serve --live-reload",
-        "build": "webpack",
+        "dev": "webpack serve --live-reload --mode development",
+        "build": "webpack --mode production",
         "clean": "rm -rf dist"
     },
     "devDependencies": {
