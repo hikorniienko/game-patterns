@@ -5,7 +5,8 @@
     "scripts": {
         "dev": "webpack serve --live-reload --mode development",
         "build": "webpack --mode production",
-        "clean": "rm -rf dist"
+        "clean": "rm -rf dist",
+        "lint": "npx eslint ./src/ --ext .ts"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^6.21.0",
