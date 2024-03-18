@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: "./src/index.ts",
+    entry: ["./src/index.ts", "./src/design/Command/index.ts"],
     module: {
         rules: [
             {
@@ -20,6 +20,9 @@ module.exports = {
     devServer: {
         static: "./dist",
         port: 8080,
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
     plugins: [
         new HtmlWebpackPlugin({
