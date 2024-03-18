@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: ["./src/index.ts", "./src/design/Command/index.ts"],
+    entry: ["./src/design/Command/index.ts"],
     module: {
         rules: [
             {
