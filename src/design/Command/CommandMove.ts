@@ -10,9 +10,6 @@ export interface MoveCommandObject {
  * CommandMove
  * @description Move command class for moving objects
  * @extends Command
- * @param {I} obj - object to move
- * @param {number} x - x coordinate
- * @param {number} y - y coordinate
  * @typeParam {I} - object to move
  */
 export class CommandMove<I extends MoveCommandObject> extends Command {
@@ -22,6 +19,13 @@ export class CommandMove<I extends MoveCommandObject> extends Command {
   xBefore: number
   yBefore: number
 
+  /**
+   * CommandMove constructor
+   * @constructor
+   * @param {I} obj - object to move
+   * @param {number} x - x coordinate
+   * @param {number} y - y coordinate
+   */
   constructor (obj: I, x: number, y: number) {
     super()
     this.obj = obj
@@ -31,10 +35,20 @@ export class CommandMove<I extends MoveCommandObject> extends Command {
     this.y = y
   }
 
+  /**
+   * Execute the move command
+   * @method
+   * @returns {void}
+   */
   execute = (): void => {
     this.obj.move(this.x, this.y)
   }
 
+  /**
+   * Undo the move command
+   * @method
+   * @returns {void}
+   */
   undo = (): void => {
     this.obj.move(this.xBefore, this.yBefore)
   }
