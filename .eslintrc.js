@@ -20,5 +20,5 @@ module.exports = {
         sourceType: "module",
     },
     rules: {},
-    ignorePatterns: ["webpack.config.js", ".eslintrc.js"],
+    ignorePatterns: ["webpack.config.js", ".eslintrc.js", "docs/"],
 };
