@@ -7,6 +7,7 @@ module.exports = {
         "./src/design/Flyweight/index.ts",
         "./src/design/Observer/index.ts",
         "./src/design/Prototype/index.ts",
+        "./src/design/Singleton/index.ts",
     ],
     module: {
         rules: [
