@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: ["./src/design/Command/index.ts", "./src/design/Flyweight/index.ts"],
+    entry: ["./src/design/Command/index.ts", "./src/design/Flyweight/index.ts", "./src/design/Observer/index.ts"],
     module: {
         rules: [
             {

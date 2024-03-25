@@ -4,6 +4,7 @@ import { FlyweightFactory } from './FlyweightFactory'
 /**************************************************
  TEST CASES
 **************************************************/
+
 class Context {
   value: string
   flyweight: Flyweight
