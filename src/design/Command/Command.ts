@@ -1,12 +1,7 @@
-interface ICommand {
-  execute: () => void
-  undo: () => void
-}
-
 /**
  * Abstract Command class
  */
-export abstract class Command implements ICommand {
+export abstract class Command {
   execute = (): void => {
     throw new Error('Command.execute() must be overridden')
   }
