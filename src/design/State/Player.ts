@@ -1,9 +1,9 @@
-import { StateSystem, StateObjectSystem } from './StateSystem'
+import { StateSystem, StateSubjectSystem } from './StateSystem'
 
 /**
  * Player
  */
-export class Player extends StateObjectSystem {}
+export class Player extends StateSubjectSystem {}
 
 /**
  * Player State (Idle, Walk, Jump)

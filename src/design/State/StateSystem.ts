@@ -16,9 +16,9 @@ export abstract class StateSystem {
 }
 
 /**
- * State Object System
+ * State Subject System
  */
-export abstract class StateObjectSystem {
+export abstract class StateSubjectSystem {
   stateMachine: StateMachineSystem | null = null
 
   setStateMachine = (stateMachine: StateMachineSystem): void => {
