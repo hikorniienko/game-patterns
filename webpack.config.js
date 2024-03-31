@@ -8,6 +8,7 @@ module.exports = {
         "./src/design/Observer/index.ts",
         "./src/design/Prototype/index.ts",
         "./src/design/Singleton/index.ts",
+        "./src/design/State/index.ts",
     ],
     module: {
         rules: [
