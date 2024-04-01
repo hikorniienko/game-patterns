@@ -9,6 +9,7 @@ module.exports = {
         "./src/design/Prototype/index.ts",
         "./src/design/Singleton/index.ts",
         "./src/design/State/index.ts",
+        "./src/sequencing/DoubleBuffer/index.ts",
     ],
     module: {
         rules: [
