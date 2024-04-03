@@ -10,6 +10,8 @@ module.exports = {
         "./src/design/Singleton/index.ts",
         "./src/design/State/index.ts",
         "./src/sequencing/DoubleBuffer/index.ts",
+        "./src/sequencing/GameLoop/index.ts",
+        "./src/behevioral/SubclassSandbox/index.ts",
     ],
     module: {
         rules: [
