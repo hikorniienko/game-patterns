@@ -19,13 +19,13 @@ export abstract class StateSystem {
  * State Subject System
  */
 export abstract class StateSubjectSystem {
-  stateMachine: StateMachineSystem | null = null
+  protected stateMachine: StateMachineSystem | null = null
 
-  setStateMachine = (stateMachine: StateMachineSystem): void => {
+  public setStateMachine = (stateMachine: StateMachineSystem): void => {
     this.stateMachine = stateMachine
   }
 
-  update = (): void => {
+  public update = (): void => {
     this.stateMachine?.execute()
   }
 }
@@ -34,9 +34,9 @@ export abstract class StateSubjectSystem {
  * State Machine System
  */
 export class StateMachineSystem {
-  state: string
-  states: Map<string, StateSystem>
-  transitions: Map<string, string[]>
+  protected state: string
+  protected states: Map<string, StateSystem>
+  protected transitions: Map<string, string[]>
 
   constructor (initialState: string) {
     this.state = initialState
@@ -44,17 +44,17 @@ export class StateMachineSystem {
     this.transitions = new Map<string, string[]>()
   }
 
-  addState = (state: string, transitions: string[], stateSystem: StateSystem): void => {
+  public addState = (state: string, transitions: string[], stateSystem: StateSystem): void => {
     this.states.set(state, stateSystem)
     this.transitions.set(state, transitions)
   }
 
-  removeState = (state: string): void => {
+  public removeState = (state: string): void => {
     this.states.delete(state)
     this.transitions.delete(state)
   }
 
-  setState = (state: string): void => {
+  public setState = (state: string): void => {
     if (this.state === state) return
     if (!this.isValidTransition(state)) return
 
@@ -63,15 +63,15 @@ export class StateMachineSystem {
     this.states.get(this.state)?.enter()
   }
 
-  getState = (): string => {
+  public getState = (): string => {
     return this.state
   }
 
-  isValidTransition = (state: string): boolean => {
+  public isValidTransition = (state: string): boolean => {
     return (this.transitions.get(this.state) ?? []).includes(state)
   }
 
-  execute = (): void => {
+  public execute = (): void => {
     this.states.get(this.state)?.execute()
   }
 }

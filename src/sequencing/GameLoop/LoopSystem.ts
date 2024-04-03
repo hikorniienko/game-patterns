@@ -1,5 +1,5 @@
 /**
- * LoopSystem
+ * Loop System
  */
 export class LoopSystem {
   private readonly frame: (timestamp: number) => void

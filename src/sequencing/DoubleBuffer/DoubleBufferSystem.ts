@@ -1,5 +1,5 @@
 /**
- * DoubleBuffer System
+ * Double Buffer System
  */
 export class DoubleBufferSystem {
   private currentBuffer: any[]
