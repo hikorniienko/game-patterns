@@ -1,15 +1,15 @@
-import { GameLoop } from './GameLoop'
+import { LoopSystem } from './LoopSystem'
 
 /**************************************************
  TEST CASES
 **************************************************/
 
-const gameLoop = new GameLoop(() => {
+const loopSystem = new LoopSystem(() => {
   console.log('Updating game...')
 })
 
 console.log('%c Sequencing: GameLoop ', 'background: pink; font-size: large')
 console.log('Game loop started')
-gameLoop.start()
+loopSystem.start()
 console.log('Game loop stopped')
-gameLoop.stop()
+loopSystem.stop()

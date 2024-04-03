@@ -1,7 +1,7 @@
 /**
- * GameLoop
+ * LoopSystem
  */
-export class GameLoop {
+export class LoopSystem {
   private readonly frame: (timestamp: number) => void
   private frameMS: number = 1000 / 60
   private requestId: number | null = null
@@ -20,20 +20,20 @@ export class GameLoop {
     }
   }
 
-  start = (): void => {
+  public start = (): void => {
     if (this.requestId === null) {
       this.requestId = requestAnimationFrame(this.frame)
     }
   }
 
-  stop = (): void => {
+  public stop = (): void => {
     if (this.requestId !== null) {
       cancelAnimationFrame(this.requestId)
       this.requestId = null
     }
   }
 
-  setFPS = (fps: number): void => {
+  public setFPS = (fps: number): void => {
     this.frameMS = 1000 / fps
   }
 }

@@ -11,6 +11,7 @@ module.exports = {
         "./src/design/State/index.ts",
         "./src/sequencing/DoubleBuffer/index.ts",
         "./src/sequencing/GameLoop/index.ts",
+        "./src/sequencing/UpdateMethod/index.ts",
         "./src/behevioral/SubclassSandbox/index.ts",
     ],
     module: {
