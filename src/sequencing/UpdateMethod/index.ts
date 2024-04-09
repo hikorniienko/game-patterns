@@ -3,6 +3,7 @@ import { UpdateSystem, UpdateObjectSystem } from './UpdateSystem'
 /**************************************************
  TEST CASES
 **************************************************/
+
 class Player extends UpdateObjectSystem {
   health: number = 100
 

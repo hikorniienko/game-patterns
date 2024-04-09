@@ -10,6 +10,7 @@ export class UpdateSystem {
     const length = this.objects.length
     for (let i = 0; i < length; i++) {
       this.objects[i].update()
+      this.objects[i].render()
     }
   }
 
@@ -20,11 +21,15 @@ export class UpdateSystem {
 
 export abstract class UpdateObjectSystem {
   public isRemoved = (): boolean => {
-    console.error('RunnerObject.isRemoved() must be overridden')
+    console.error('UpdateSystem.isRemoved() must be overridden')
     return false
   }
 
   public update = (): void => {
-    console.error('RunnerObject.update() must be overridden')
+    console.error('UpdateSystem.update() must be overridden')
+  }
+
+  public render = (): void => {
+    console.error('UpdateSystem.render() must be overridden')
   }
 }

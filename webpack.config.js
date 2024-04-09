@@ -13,6 +13,8 @@ module.exports = {
         "./src/sequencing/GameLoop/index.ts",
         "./src/sequencing/UpdateMethod/index.ts",
         "./src/behevioral/SubclassSandbox/index.ts",
+        "./src/behevioral/TypeObject/index.ts",
+        "./src/decoupling/Component/index.ts",
     ],
     module: {
         rules: [
